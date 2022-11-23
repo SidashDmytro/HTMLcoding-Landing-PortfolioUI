@@ -1,0 +1,367 @@
+@font-face {
+    font-family: 'Heebo-Regular';
+    font-weight: 400;
+    font-style: normal;
+    src: url('../fonts/Heebo-Regular.woff2') format('woff2'), url('../fonts/Heebo-Regular.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Heebo-Bold';
+    font-weight: 700;
+    font-style: normal;
+    src: url('../fonts/Heebo-Bold.woff2') format('woff2'), url('../fonts/Heebo-Bold.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Heebo-Medium';
+    font-weight: 500;
+    font-style: normal;
+    src: url('../fonts/Heebo-Medium.woff2') format('woff2'), url('../fonts/Heebo-Medium.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Heebo-Black';
+    font-weight: 900;
+    font-style: normal;
+    src: url('../fonts/Heebo-Black.woff2') format('woff2'), url('../fonts/Heebo-Black.woff') format('woff');
+}
+
+* {
+    padding:0;
+    margin:0;
+}
+
+/* ------------------- */
+/* Reset               */
+/* ------------------- */
+
+/* https://piccalil.li/blog/a-modern-css-reset/ */
+
+/* Box sizing */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Reset margins */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+figure,
+picture {
+    margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    font-weight: 400;
+}
+
+/* make images easier to work with */
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+/* make form elements easier to work with */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* remove animations for people who've turned them off */
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+body {
+    min-width: 320px;
+    overflow-x: hidden;
+    font-family: 'Heebo-Regular', 'Arial', 'sans-serif';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #21243D;
+    min-height: 100vh;
+}
+
+/* Header start */
+
+.container {
+    padding: 20px 18px 12px;
+}
+
+.header {
+    min-height: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: end;
+    align-items: center;
+}
+
+.menu__btn{
+    width: 30px;
+    height: 20px;
+    border: none;
+    background: #fff;
+    position: relative;
+    &::after{
+        content: '';
+        width: 30px;
+        height: 2px;
+        background-color: #21243D;
+        position: absolute;
+        top: 0;
+        left: 0;
+        box-shadow: 0 9px 0 0 #21243D, 0 18px 0 0 #21243D;
+    }
+}
+/* Header end */
+
+/* Top section start */
+.top{
+    text-align: center;
+    &__photo-author{
+        margin-top: 33px;
+        margin-bottom: 43px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 171px;
+        height: 171px;
+        border-radius: 50%;
+        box-shadow: -4px 9px #EDF7FA;
+    }
+    &__title{
+        margin:0 auto;
+        padding-bottom: 21px;
+        font-family: 'Heebo-Bold', 'Arial', 'sans-serif';
+        font-size: 32px;
+        line-height: 40px;
+        max-width: 312px;
+    }
+    &__description{
+        margin:0 auto;
+        margin-bottom: 36px;
+        padding-left: 23px;
+        padding-right: 23px;
+        max-width: 328px;
+    }
+    &__btn{
+        display: flex;
+        justify-content: center; 
+        align-items: center;
+        margin: auto;
+        background-color: #FF6464;
+        color: #FFFFFF;
+        width: 208px;
+        height: 47px;
+        margin-bottom: 59px; 
+        border-radius: 2px;
+        font-family: 'Heebo-Medium', 'Arial', 'sans-serif';
+        font-weight: 500;
+        font-size: 20px;
+        text-decoration: none;
+        border: none;
+    }
+    &__btn:focus,
+    &__btn:hover,
+    &__btn:active {
+        opacity: .75;
+    }
+}
+/* Top section end */
+
+/* Posts section start */
+
+.posts{
+    background: #EDF7FA;
+    &__main-title{
+        display: flex;
+        height: 60px;
+        margin: auto;
+        align-items: center;
+        justify-content: center; 
+        font-family: 'Heebo-Regular', 'Arial', 'sans-serif';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+    }
+    &__recent-posts{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+        margin: auto;
+        max-width: 354px;
+    }
+    &__post{
+        background: #fff;
+        margin-bottom: 17px;
+        padding-left: 19px;
+        padding-right: 19px;
+        box-shadow: 0px 4px 10px rgba(187, 225, 250, 0.25);
+        border-radius: 4px;
+    }
+    &__post-link{
+        display: flex;
+        margin-top: 12px;
+        margin-bottom: 12px;
+        text-decoration: none;
+        font-family: 'Heebo-Bold', 'Arial', 'sans-serif';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 22px;
+        line-height: 30px;
+        color: #21243D;
+    }
+    &__post-link:hover,
+    &__post-link:focus,
+    &__post-link:active {
+        text-decoration: underline;
+    }
+    &__post-info{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-bottom: 19px;
+    }
+    &__post-date{
+        margin-right: 24px;
+        padding-right: 24px;
+        border-right: 1px solid #000;
+    }
+    &__post-desc{
+        margin-bottom: 22px;
+    }
+}
+/* Posts section end */
+
+/* Works section start */
+.works{
+    margin-bottom: 150px;
+    &__title{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 60px;
+        font-family: 'Heebo-Regular', 'Arial', 'sans-serif';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+    }
+    &__work{
+        display: flex;
+        flex-direction: column;
+        max-width: 344px;
+        margin: auto;
+        padding-left: 18px;
+        padding-right: 18px;
+    }
+    &__pic{
+        margin-bottom: 17px;
+        border-radius: 6px;
+    }
+    &__link-pic{
+        text-decoration: none;
+    }
+    &__link-pic:hover,
+    &__link-pic:focus,
+    &__link-pic:active {
+        opacity: .75;
+    }
+    &__link{
+        font-family: 'Heebo-Bold';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 30px;
+        text-decoration: none;
+        padding-bottom: 16px;
+        color: #21243D;
+    }
+    &__link:focus,
+    &__link:hover,
+    &__link:active {
+        text-decoration: underline;
+    }
+    &__info{
+        display: flex;
+        flex-wrap: wrap;
+        padding-bottom: 24px;
+        &-year{
+            margin-right: 22px;
+            padding-left: 12px;
+            padding-right: 12px;
+            font-family: 'Heebo-Black', 'Arial', 'sans-serif';
+            font-style: normal;
+            font-weight: 900;
+            font-size: 16px;
+            background: #142850;
+            border-radius: 16px;
+            color: #fff;
+        }
+        &-category{
+            color: #8695A4;
+        }
+    }
+    &__desc{
+        padding-bottom: 17px;
+        position: relative;
+    }
+    &__desc::after{
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        border: 1px solid #E0E0E0;
+    }
+}
+/* Works section end */
+
+/* Footer start */
+.footer{
+    &__social{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom: 26px;
+        &-btn{
+            margin-right: 35px;
+        }
+        &-btn:last-child{
+            margin-right: 0;
+        }
+        &-link:focus,
+        &-link:hover,
+        &-link:active{
+            opacity: .75;
+        }
+    }
+    &__text{
+        text-align: center;
+        padding-bottom: 54px;
+    }
+}
+/* Footer end */
