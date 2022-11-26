@@ -111,7 +111,6 @@ body {
     }
 }
 
-
 /* Header start */
 
 .header {
@@ -122,9 +121,44 @@ body {
     align-items: center;
     &__container {
         padding: 20px 18px 12px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        position: relative;
     }
     &__menu{
         display: none;
+        position: absolute;
+        margin-top: 40px;
+        background: #FFF;
+        box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.04);
+        -webkit-box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.04);
+        -moz-box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.04);
+        &-ul{
+            margin: 30px 50px 0 30px;
+            display: flex;
+            flex-wrap: wrap;
+            list-style: none;
+        }
+        &-li{
+            margin-bottom: 30px;
+        }
+        &-link{
+            text-decoration: none;
+            font-family: 'Heebo-Medium', 'Arial', 'sans-serif';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 26px;
+            color: #000000;
+        }
+        &-link:hover,
+        &-link:focus,
+        &-link:active {
+            text-decoration: underline;
+        }
+    }
+    &__burger{
+        width: 100%;
     }
     &__burger-btn{
         width: 30px;
@@ -144,6 +178,9 @@ body {
         }
     }
 }
+.active {
+    display: block;
+}
 @media (min-width: 1024px){
     .header {
         min-height: 60px;
@@ -154,30 +191,22 @@ body {
         }
         &__menu{
             display: block;
+            position: relative;
+            margin: 0;
+            background: none;
+            box-shadow: none;
             &-ul{
-                display: flex;
-                flex-wrap: wrap;
-                list-style: none;
-                margin-right: 60px;
+                margin: 0 60px 0 0;
             }
             &-li{
                 margin-right: 33px;
+                margin-bottom: 0;
             }
             &-li:last-child{
                 margin-right: 0;
             }
             &-link{
-                text-decoration: none;
-                font-family: 'Heebo-Medium', 'Arial', 'sans-serif';
-                font-style: normal;
-                font-weight: 500;
                 font-size: 20px;
-                color: #000000;
-            }
-            &-link:hover,
-            &-link:focus,
-            &-link:active {
-                text-decoration: underline;
             }
         }
     }
