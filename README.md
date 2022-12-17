@@ -4,4 +4,4 @@ https://www.figma.com/file/gKZoWoleFgP35xvYu83Y2l/Portfolio-UI---Web-%26-Mobile?
 
 Result:
 
-https://sidashdmytro.com/Landing-PortfolioUI/index.html
+https://sidashdmytro.github.io/HTMLcoding-Landing-PortfolioUI/
